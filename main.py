@@ -5,6 +5,7 @@ from werkzeug.datastructures import FileStorage
 from dotenv import load_dotenv
 from google.cloud import vision
 import io
+import os
 
 load_dotenv()
 
@@ -69,4 +70,5 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(threaded=True, host="0.0.0.0",
+            port=int(os.environ.get("PORT", 8080)))
