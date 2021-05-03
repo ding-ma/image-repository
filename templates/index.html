@@ -12,9 +12,8 @@
         <p>Please select type of job</p>
 
 
-        <input type="radio" name="options" id="option1" value="characteristics"> By characteristics </input<br>
-        <input type="radio" name="options" id="option2" value="text"> By text </input<br>
-        <input type="radio" name="options" id="option3" value="image"> By image </input<br>
+        <input type="radio" name="options" id="option2" value="text"> Search by text in image </input<br>
+        <input type="radio" name="options" id="option3" value="image"> Search by similar images </input<br>
 
 
         <p><input type="submit" value="Submit"></p>
@@ -24,9 +23,12 @@
 
 
 <div id='info_section'>
-    {% for data in data %}
-    <h2>{{ data }}</h2>
-    {% endfor %}
+    <ul>
+        {% for data in data %}
+        <li><a href={{ data }}>{{ data }}</a></li>
+        {% endfor %}
+    </ul>
+
 </div>
 
 </html>
