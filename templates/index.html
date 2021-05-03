@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>File Upload</title>
+</head>
+
+<body>
+    <h1>File Upload</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+        <p><input type="file" name="file"></p>
+        <p>Please select type of job</p>
+
+
+        <input type="radio" name="options" id="option1" value="characteristics"> By characteristics </input<br>
+        <input type="radio" name="options" id="option2" value="text"> By text </input<br>
+        <input type="radio" name="options" id="option3" value="image"> By image </input<br>
+
+
+        <p><input type="submit" value="Submit"></p>
+
+    </form>
+</body>
+
+
+<div id='info_section'>
+    {% for data in data %}
+    <h2>{{ data }}</h2>
+    {% endfor %}
+</div>
+
+</html>
